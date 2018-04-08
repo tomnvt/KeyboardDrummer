@@ -13,6 +13,7 @@
 		E39DB146207A15780014B759 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DB145207A15780014B759 /* ViewController.swift */; };
 		E39DB148207A15780014B759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E39DB147207A15780014B759 /* Assets.xcassets */; };
 		E39DB14B207A15780014B759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39DB149207A15780014B759 /* Main.storyboard */; };
+		E3B3A943207A26F9004818A6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B3A942207A26F9004818A6 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E39DB14A207A15780014B759 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E39DB14C207A15790014B759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E39DB14D207A15790014B759 /* KeyboardDrummer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardDrummer.entitlements; sourceTree = "<group>"; };
+		E3B3A942207A26F9004818A6 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E5E94A14447EE76611D9696E /* Pods-KeyboardDrummer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardDrummer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardDrummer/Pods-KeyboardDrummer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				E39DB143207A15780014B759 /* AppDelegate.swift */,
+				E3B3A942207A26F9004818A6 /* View.swift */,
 				E39DB145207A15780014B759 /* ViewController.swift */,
 				E39DB147207A15780014B759 /* Assets.xcassets */,
 				E39DB149207A15780014B759 /* Main.storyboard */,
@@ -223,6 +226,7 @@
 			files = (
 				E39DB146207A15780014B759 /* ViewController.swift in Sources */,
 				E39DB144207A15780014B759 /* AppDelegate.swift in Sources */,
+				E3B3A943207A26F9004818A6 /* View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
