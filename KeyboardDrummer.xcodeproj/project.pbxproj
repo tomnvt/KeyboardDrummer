@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C26C8F86096D19D8A273E438 /* Pods_KeyboardDrummer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B0E655DD5C7B176C9B60E8 /* Pods_KeyboardDrummer.framework */; };
+		E3485EA4207A17A7003DB2C6 /* Drums in Resources */ = {isa = PBXBuildFile; fileRef = E3485EA3207A17A7003DB2C6 /* Drums */; };
 		E39DB144207A15780014B759 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DB143207A15780014B759 /* AppDelegate.swift */; };
 		E39DB146207A15780014B759 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DB145207A15780014B759 /* ViewController.swift */; };
 		E39DB148207A15780014B759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E39DB147207A15780014B759 /* Assets.xcassets */; };
@@ -14,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33A142C6A95BD2C1982A9A02 /* Pods-KeyboardDrummer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardDrummer.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardDrummer/Pods-KeyboardDrummer.release.xcconfig"; sourceTree = "<group>"; };
+		69B0E655DD5C7B176C9B60E8 /* Pods_KeyboardDrummer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyboardDrummer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3485EA3207A17A7003DB2C6 /* Drums */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Drums; sourceTree = "<group>"; };
 		E39DB140207A15780014B759 /* KeyboardDrummer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardDrummer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39DB143207A15780014B759 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E39DB145207A15780014B759 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -21,6 +26,7 @@
 		E39DB14A207A15780014B759 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E39DB14C207A15790014B759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E39DB14D207A15790014B759 /* KeyboardDrummer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardDrummer.entitlements; sourceTree = "<group>"; };
+		E5E94A14447EE76611D9696E /* Pods-KeyboardDrummer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardDrummer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardDrummer/Pods-KeyboardDrummer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +34,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C26C8F86096D19D8A273E438 /* Pods_KeyboardDrummer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC0098728B5A5FB1BEC8E4E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69B0E655DD5C7B176C9B60E8 /* Pods_KeyboardDrummer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E39DB137207A15780014B759 = {
 			isa = PBXGroup;
 			children = (
 				E39DB142207A15780014B759 /* KeyboardDrummer */,
 				E39DB141207A15780014B759 /* Products */,
+				F523B050DF2E5FA5790F8DF9 /* Pods */,
+				AC0098728B5A5FB1BEC8E4E6 /* Frameworks */,
+				E3485EA3207A17A7003DB2C6 /* Drums */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +81,15 @@
 			path = KeyboardDrummer;
 			sourceTree = "<group>";
 		};
+		F523B050DF2E5FA5790F8DF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5E94A14447EE76611D9696E /* Pods-KeyboardDrummer.debug.xcconfig */,
+				33A142C6A95BD2C1982A9A02 /* Pods-KeyboardDrummer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -70,9 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E39DB150207A15790014B759 /* Build configuration list for PBXNativeTarget "KeyboardDrummer" */;
 			buildPhases = (
+				B8312DAF42D948740ABD8E75 /* [CP] Check Pods Manifest.lock */,
 				E39DB13C207A15780014B759 /* Sources */,
 				E39DB13D207A15780014B759 /* Frameworks */,
 				E39DB13E207A15780014B759 /* Resources */,
+				DEDD62C7F988F897CEC5CE79 /* [CP] Embed Pods Frameworks */,
+				D10D4477807C416A8401231A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,12 +152,69 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3485EA4207A17A7003DB2C6 /* Drums in Resources */,
 				E39DB148207A15780014B759 /* Assets.xcassets in Resources */,
 				E39DB14B207A15780014B759 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B8312DAF42D948740ABD8E75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KeyboardDrummer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D10D4477807C416A8401231A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeyboardDrummer/Pods-KeyboardDrummer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEDD62C7F988F897CEC5CE79 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KeyboardDrummer/Pods-KeyboardDrummer-frameworks.sh",
+				"${PODS_ROOT}/AudioKit/macOS/AudioKit.framework",
+				"${PODS_ROOT}/AudioKit/macOS/AudioKitUI.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioKitUI.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeyboardDrummer/Pods-KeyboardDrummer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E39DB13C207A15780014B759 /* Sources */ = {
@@ -261,6 +348,7 @@
 		};
 		E39DB151207A15790014B759 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5E94A14447EE76611D9696E /* Pods-KeyboardDrummer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = KeyboardDrummer/KeyboardDrummer.entitlements;
@@ -276,6 +364,7 @@
 		};
 		E39DB152207A15790014B759 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33A142C6A95BD2C1982A9A02 /* Pods-KeyboardDrummer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = KeyboardDrummer/KeyboardDrummer.entitlements;
