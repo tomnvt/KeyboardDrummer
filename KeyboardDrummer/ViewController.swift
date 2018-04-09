@@ -41,29 +41,7 @@ class ViewController: NSViewController {
             self.keyUp(with: $0)
             return $0
         }
-        do {
-            bassDrumFile = try AKAudioFile(readFileName: "Drums/bass_drum_C1.wav")
-            clapFile = try AKAudioFile(readFileName: "Drums/clap_D#1.wav")
-            closedHiHatFile = try AKAudioFile(readFileName: "Drums/closed_hi_hat_F#1.wav")
-            hiTomFile = try AKAudioFile(readFileName: "Drums/hi_tom_D2.wav")
-            loTomFile = try AKAudioFile(readFileName: "Drums/lo_tom_F1.wav")
-            midTomFile = try AKAudioFile(readFileName: "Drums/mid_tom_B1.wav")
-            openHiHatFile = try AKAudioFile(readFileName: "Drums/open_hi_hat_A#1.wav")
-            snareDrumFile = try AKAudioFile(readFileName: "Drums/snare_D1.wav")
-            try drums.loadAudioFiles([bassDrumFile!,
-                                      clapFile!,
-                                      closedHiHatFile!,
-                                      hiTomFile!,
-                                      loTomFile!,
-                                      midTomFile!,
-                                      openHiHatFile!,
-                                      snareDrumFile!])
-        }
-        catch {
-            print("Error while loading drums")
-        }
-        AudioKit.output = drums
-        AudioKit.start()
+        loadDrums()
     }
 
     override func keyDown(with event: NSEvent) {
@@ -121,5 +99,82 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func popUpChange(_ sender: NSPopUpButton) {
+        switch sender.tag {
+        case 0:
+            print("0")
+            if let number = sender.titleOfSelectedItem {
+                print(number)
+            }
+        case 1:
+            print("1")
+            if let number = sender.titleOfSelectedItem {
+                print(number)
+            }
+        case 2:
+            print("2")
+            if let number = sender.titleOfSelectedItem {
+                print(number)
+            }
+        case 3:
+            print("3")
+            if let number = sender.titleOfSelectedItem {
+                print(number)
+            }
+        case 4:
+            print("4")
+            if let number = sender.titleOfSelectedItem {
+                print(number)
+            }
+        case 5:
+            print("5")
+            if let number = sender.titleOfSelectedItem {
+                print(number)
+            }
+        case 6:
+            print("6")
+            if let number = sender.titleOfSelectedItem {
+                print(number)
+            }
+        case 7:
+            print("7")
+            if let number = sender.titleOfSelectedItem {
+                print(number)
+            }
+        default:
+            break
+        }
+    }
+    
+    func loadDrums() {
+        do {
+            bassDrumFile = try AKAudioFile(readFileName: "Drums/bass_drum_C1.wav")
+            clapFile = try AKAudioFile(readFileName: "Drums/clap_D#1.wav")
+            closedHiHatFile = try AKAudioFile(readFileName: "Drums/closed_hi_hat_F#1.wav")
+            hiTomFile = try AKAudioFile(readFileName: "Drums/hi_tom_D2.wav")
+            loTomFile = try AKAudioFile(readFileName: "Drums/lo_tom_F1.wav")
+            midTomFile = try AKAudioFile(readFileName: "Drums/mid_tom_B1.wav")
+            openHiHatFile = try AKAudioFile(readFileName: "Drums/open_hi_hat_A#1.wav")
+            snareDrumFile = try AKAudioFile(readFileName: "Drums/snare_D1.wav")
+        }
+        catch {
+            print("Error while loading drums")
+        }
+        do {
+            try drums.loadAudioFiles([bassDrumFile!,
+                                      clapFile!,
+                                      closedHiHatFile!,
+                                      hiTomFile!,
+                                      loTomFile!,
+                                      midTomFile!,
+                                      openHiHatFile!,
+                                      snareDrumFile!])
+        } catch {
+            print("Error while loading drums")
+        }
+        AudioKit.output = drums
+        AudioKit.start()
+    }
+    
 }
 
