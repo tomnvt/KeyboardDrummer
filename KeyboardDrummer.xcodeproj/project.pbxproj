@@ -13,8 +13,19 @@
 		E39DB146207A15780014B759 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DB145207A15780014B759 /* ViewController.swift */; };
 		E39DB148207A15780014B759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E39DB147207A15780014B759 /* Assets.xcassets */; };
 		E39DB14B207A15780014B759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39DB149207A15780014B759 /* Main.storyboard */; };
+		E3AC1BA0208159DD0077E263 /* KeyboardDrummerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AC1B9F208159DD0077E263 /* KeyboardDrummerUITests.swift */; };
 		E3B3A943207A26F9004818A6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B3A942207A26F9004818A6 /* View.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E3AC1BA2208159DD0077E263 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E39DB138207A15780014B759 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E39DB13F207A15780014B759;
+			remoteInfo = KeyboardDrummer;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		33A142C6A95BD2C1982A9A02 /* Pods-KeyboardDrummer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardDrummer.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardDrummer/Pods-KeyboardDrummer.release.xcconfig"; sourceTree = "<group>"; };
@@ -27,6 +38,9 @@
 		E39DB14A207A15780014B759 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E39DB14C207A15790014B759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E39DB14D207A15790014B759 /* KeyboardDrummer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardDrummer.entitlements; sourceTree = "<group>"; };
+		E3AC1B9D208159DC0077E263 /* KeyboardDrummerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyboardDrummerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3AC1B9F208159DD0077E263 /* KeyboardDrummerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDrummerUITests.swift; sourceTree = "<group>"; };
+		E3AC1BA1208159DD0077E263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3B3A942207A26F9004818A6 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E5E94A14447EE76611D9696E /* Pods-KeyboardDrummer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardDrummer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardDrummer/Pods-KeyboardDrummer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,6 +51,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C26C8F86096D19D8A273E438 /* Pods_KeyboardDrummer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3AC1B9A208159DC0077E263 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				E39DB142207A15780014B759 /* KeyboardDrummer */,
+				E3AC1B9E208159DD0077E263 /* KeyboardDrummerUITests */,
 				E39DB141207A15780014B759 /* Products */,
 				F523B050DF2E5FA5790F8DF9 /* Pods */,
 				AC0098728B5A5FB1BEC8E4E6 /* Frameworks */,
@@ -66,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				E39DB140207A15780014B759 /* KeyboardDrummer.app */,
+				E3AC1B9D208159DC0077E263 /* KeyboardDrummerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +105,15 @@
 				E39DB14D207A15790014B759 /* KeyboardDrummer.entitlements */,
 			);
 			path = KeyboardDrummer;
+			sourceTree = "<group>";
+		};
+		E3AC1B9E208159DD0077E263 /* KeyboardDrummerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E3AC1B9F208159DD0077E263 /* KeyboardDrummerUITests.swift */,
+				E3AC1BA1208159DD0077E263 /* Info.plist */,
+			);
+			path = KeyboardDrummerUITests;
 			sourceTree = "<group>";
 		};
 		F523B050DF2E5FA5790F8DF9 /* Pods */ = {
@@ -116,6 +148,24 @@
 			productReference = E39DB140207A15780014B759 /* KeyboardDrummer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E3AC1B9C208159DC0077E263 /* KeyboardDrummerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3AC1BA6208159DD0077E263 /* Build configuration list for PBXNativeTarget "KeyboardDrummerUITests" */;
+			buildPhases = (
+				E3AC1B99208159DC0077E263 /* Sources */,
+				E3AC1B9A208159DC0077E263 /* Frameworks */,
+				E3AC1B9B208159DC0077E263 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3AC1BA3208159DD0077E263 /* PBXTargetDependency */,
+			);
+			name = KeyboardDrummerUITests;
+			productName = KeyboardDrummerUITests;
+			productReference = E3AC1B9D208159DC0077E263 /* KeyboardDrummerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -129,6 +179,11 @@
 					E39DB13F207A15780014B759 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					E3AC1B9C208159DC0077E263 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E39DB13F207A15780014B759;
 					};
 				};
 			};
@@ -146,6 +201,7 @@
 			projectRoot = "";
 			targets = (
 				E39DB13F207A15780014B759 /* KeyboardDrummer */,
+				E3AC1B9C208159DC0077E263 /* KeyboardDrummerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -158,6 +214,13 @@
 				E3485EA4207A17A7003DB2C6 /* Drums in Resources */,
 				E39DB148207A15780014B759 /* Assets.xcassets in Resources */,
 				E39DB14B207A15780014B759 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3AC1B9B208159DC0077E263 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +293,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E3AC1B99208159DC0077E263 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3AC1BA0208159DD0077E263 /* KeyboardDrummerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3AC1BA3208159DD0077E263 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E39DB13F207A15780014B759 /* KeyboardDrummer */;
+			targetProxy = E3AC1BA2208159DD0077E263 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E39DB149207A15780014B759 /* Main.storyboard */ = {
@@ -382,6 +461,34 @@
 			};
 			name = Release;
 		};
+		E3AC1BA4208159DD0077E263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = KeyboardDrummerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nvt.KeyboardDrummerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = KeyboardDrummer;
+			};
+			name = Debug;
+		};
+		E3AC1BA5208159DD0077E263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = KeyboardDrummerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nvt.KeyboardDrummerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = KeyboardDrummer;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -399,6 +506,15 @@
 			buildConfigurations = (
 				E39DB151207A15790014B759 /* Debug */,
 				E39DB152207A15790014B759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3AC1BA6208159DD0077E263 /* Build configuration list for PBXNativeTarget "KeyboardDrummerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3AC1BA4208159DD0077E263 /* Debug */,
+				E3AC1BA5208159DD0077E263 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
