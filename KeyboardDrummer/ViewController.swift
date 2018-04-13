@@ -22,41 +22,16 @@ class ViewController: NSViewController {
     
     let drums = AKSampler()
     
-    
     var drumFilesArray : [AKAudioFile?] = {
-        var bassDrumFile : AKAudioFile? = {
-            let drumFile = try? AKAudioFile(readFileName: "Drums/bass_drum1_C1.wav")
-            return drumFile
-        }()
-        var clapFile : AKAudioFile? = {
-            let drumFile = try? AKAudioFile(readFileName: "Drums/snare_D1.wav")
-            return drumFile
-        }()
-        var closedHiHatFile : AKAudioFile? = {
-            let drumFile = try? AKAudioFile(readFileName: "Drums/closed_hi_hat_F#1.wav")
-            return drumFile
-        }()
-        var hiTomFile : AKAudioFile? = {
-            let drumFile = try? AKAudioFile(readFileName: "Drums/open_hi_hat_A#1.wav")
-            return drumFile
-        }()
-        var loTomFile : AKAudioFile? = {
-            let drumFile = try? AKAudioFile(readFileName: "Drums/hi_tom_D2.wav")
-            return drumFile
-        }()
-        var midTomFile : AKAudioFile? = {
-            let drumFile = try? AKAudioFile(readFileName: "Drums/lo_tom_F1.wav")
-            return drumFile
-        }()
-        var openHiHatFile : AKAudioFile? = {
-            let drumFile = try? AKAudioFile(readFileName: "Drums/mid_tom_B1.wav")
-            return drumFile
-        }()
-        var snareDrumFile : AKAudioFile? = {
-            let drumFile = try? AKAudioFile(readFileName: "Drums/clap_D#1.wav")
-            return drumFile
-        }()
-       let array = [bassDrumFile, clapFile, closedHiHatFile, hiTomFile, loTomFile, midTomFile, openHiHatFile, snareDrumFile]
+        var bassDrumFile : AKAudioFile?
+        var snareDrumFile : AKAudioFile?
+        var closedHiHatFile : AKAudioFile?
+        var loTomFile : AKAudioFile?
+        var midTomFile : AKAudioFile?
+        var hiTomFile : AKAudioFile?
+        var openHiHatFile : AKAudioFile?
+        var clapFile : AKAudioFile?
+        let array = [bassDrumFile, clapFile, closedHiHatFile, loTomFile, midTomFile, hiTomFile, openHiHatFile, snareDrumFile]
         return array
     }()
     
@@ -64,18 +39,18 @@ class ViewController: NSViewController {
                             "Drums/snare",
                             "Drums/closed_hi_hat",
                             "Drums/open_hi_hat",
-                            "Drums/hi_tom",
                             "Drums/lo_tom",
                             "Drums/mid_tom",
+                            "Drums/hi_tom",
                             "Drums/clap"]
     
     let drumFilesPartTwo = ["_C1.wav",
                             "_D1.wav",
                             "_F#1.wav",
                             "_A#1.wav",
-                            "_D2.wav",
                             "_F1.wav",
                             "_B1.wav",
+                            "_D2.wav",
                             "_D#1.wav"]
 
     override func viewDidLoad() {
@@ -87,6 +62,15 @@ class ViewController: NSViewController {
         NSEvent.addLocalMonitorForEvents(matching: .keyUp) {
             self.keyUp(with: $0)
             return $0
+        }
+        
+        for index in 0..<drumFilesArray.count {
+            do {
+                drumFilesArray[index] = try AKAudioFile(readFileName: drumFilesPartOne[index] + "1" + drumFilesPartTwo[index])
+            }
+            catch {
+                print("Error while setting drum paths")
+            }
         }
         
         loadDrums()
@@ -160,9 +144,7 @@ class ViewController: NSViewController {
     func loadDrums() {
         var drumFiles = [AKAudioFile]()
         for drum in drumFilesArray {
-            if let drumFile = drum {
-                drumFiles.append(drumFile)
-            }
+            if let drumFile = drum { drumFiles.append(drumFile) }
         }
         do {
             try drums.loadAudioFiles(drumFiles)
