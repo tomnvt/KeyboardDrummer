@@ -141,18 +141,4 @@ class ViewController: NSViewController {
         loadDrums()
     }
     
-    func loadDrums() {
-        var drumFiles = [AKAudioFile]()
-        for drum in drumFilesArray {
-            if let drumFile = drum { drumFiles.append(drumFile) }
-        }
-        do {
-            try drums.loadAudioFiles(drumFiles)
-        } catch {
-            print("Error while loading drums")
-        }
-    }
-    
-    
 }
-
